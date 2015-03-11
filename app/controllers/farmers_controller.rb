@@ -1,0 +1,3 @@
+class FarmersController < ApplicationController
+end
+
