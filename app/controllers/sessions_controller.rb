@@ -6,7 +6,7 @@ class SessionsController < Devise::SessionsController
       if current_user.temp_password?
         render json: { user: current_user, temp_password: true }, status: :ok
       else
-        render json: { user: current_user, teams: current_user.teams }, status: :ok
+        render json: { user: current_user }, status: :ok
       end
     else
       render json: { error: "Authentication Failed!" }, status: :unauthenticated

@@ -13,7 +13,6 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def update
-    binding.pry
     if current_user.update(user_params)
       render json: { user: current_user }, status: :ok
     else
