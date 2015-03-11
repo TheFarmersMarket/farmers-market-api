@@ -4,7 +4,7 @@
 
 #Create a User
 
-`<h5>Request:</h5>`
+#####Request:
 
 `POST /users`
 
