@@ -1,6 +1,6 @@
 <h1>Farmer's Market</h1>
 
-<p>API endpoint: <strong>https://farmersmarket.herokuapp.com</strong></p>
+<p>API endpoint: <strong>https://tiy-farmers-market.herokuapp.com</strong></p>
 
 <h2>Create a User</h2>
 
