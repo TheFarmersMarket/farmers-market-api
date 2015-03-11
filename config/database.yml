@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: farmers-market-api_production
-  username: farmers-market-api
-  password: <%= ENV['FARMERS-MARKET-API_DATABASE_PASSWORD'] %>
+  
