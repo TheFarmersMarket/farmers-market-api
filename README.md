@@ -55,3 +55,31 @@ creates a new user and resturns an authentication token.
     }
 }
 ```
+
+#Update Password
+
+#####Request:
+
+`PUT /users/password`
+
+```json
+"user": {
+  "email": "you@domain.com",
+  "password": "NewPassword8charsMinimum"
+  }
+```
+#####Response:
+
+`Status: 200 OK`
+
+creates a new user and resturns an authentication token.
+```json
+{
+    "user": {
+        "id": 5,
+        "email": "b@b.com",
+        "authentication_token": "3-3UyCnsEv2yh2v2gB6t"
+    }
+}
+```
+
