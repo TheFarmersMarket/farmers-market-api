@@ -11,7 +11,7 @@
 ```json
 "user": {
   "email": "you@domain.com",
-  "password": "password"
+  "password": "8charsMinimum"
   }
 ```
 `<h5>Response:</h5>`
@@ -21,9 +21,9 @@
 creates a new user and resturns an authentication token.
 ```json
 {
-"user": {
-  "email": "you@domain.com",
-  "authentication_token": "string",
-  "id": integer
-  }
+    "user": {
+        "id": 3,
+        "email": "fake@fake.com",
+        "authentication_token": "GRW2KfrvLRRqdiXiEHSb"
+    }
 }
