@@ -43,7 +43,7 @@ creates a new user and resturns an authentication token.
 ```
 #####Response:
 
-`Status: 201 Created`
+`Status: 200 OK`
 
 creates a new user and resturns an authentication token.
 ```json
