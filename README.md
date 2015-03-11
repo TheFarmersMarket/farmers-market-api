@@ -1,8 +1,8 @@
-<h1>Farmer's Market</h1>
+#Farmer's Market
 
-<p>API endpoint: <strong>https://tiy-farmers-market.herokuapp.com</strong></p>
+###API endpoint: <strong>https://tiy-farmers-market.herokuapp.com</strong></p>
 
-<h2>Create a User</h2>
+#Create a User
 
 `<h5>Request:</h5>`
 
@@ -14,7 +14,7 @@
   "password": "8charsMinimum"
   }
 ```
-`<h5>Response:</h5>`
+#####Response:
 
 `Status: 201 Created`
 
