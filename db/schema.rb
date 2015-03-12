@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20150312150126) do
 
   # These are extensions that must be enabled in order to support this database
@@ -19,11 +20,14 @@ ActiveRecord::Schema.define(version: 20150312150126) do
   create_table "crop_orders", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "crop_id"
+    t.integer  "order_id"
   end
 
   create_table "crops", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "farmer_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -36,18 +40,21 @@ ActiveRecord::Schema.define(version: 20150312150126) do
   end
 
   create_table "farmers", force: :cascade do |t|
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
     t.string   "location"
     t.string   "business_phone"
     t.string   "farm"
     t.text     "crops"
     t.string   "contact_name"
-  end
-
-  create_table "orders", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+  
+  create_table "orders", force: :cascade do |t|
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "farmer_id"
+    t.integer  "customer_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,6 +72,7 @@ ActiveRecord::Schema.define(version: 20150312150126) do
     t.datetime "updated_at"
     t.string   "authentication_token"
     t.boolean  "temp_password"
+    t.string   "profile_type"
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", using: :btree

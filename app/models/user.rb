@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :profile_type, inclusion: {:in => ["buyer", "farmer"] },
+    presence: true
+  after_create :create_profile!
   before_save :ensure_authentication_token
 
   has_one :farmer
@@ -16,12 +19,24 @@ class User < ActiveRecord::Base
   end
 
   def as_json(opts={})
-    options = {:only => [:name, :email, :id, :authentication_token]}
+    options = {:only => [:email, :id, :authentication_token, :profile_type]}
     options.merge!(opts)
     super(options)
   end
 
   private
+  def create_profile!
+    if self.profile_type == "buyer"
+      profile = Buyer.new
+      profile.save(validate: false)
+      self.buyer = profile
+    elsif self.profile_type == "farmer"
+      profile = Farmer.new
+      profile.save(validate: false)
+      self.farmer = profile
+    end
+  end
+
   def generate_authentication_token
     loop do
       token = Devise.friendly_token
