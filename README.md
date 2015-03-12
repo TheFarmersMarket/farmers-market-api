@@ -63,7 +63,7 @@ creates a new user and resturns an authentication token.
 
 ### /farmers/:id GET
 ##### Response:
-`200 OK`
+`Status: 200 OK`
 ```
 {
     "farmer": {
