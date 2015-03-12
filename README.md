@@ -59,6 +59,31 @@ creates a new user and resturns an authentication token.
 }
 ```
 
+# Edit Farmer Profile
+
+### /farmers/:id PUT
+
+###### Optional Params
+* farmer: {location: location, business_phone: business_phone, farm: farm, crop_names: crop_names, contact_phone: contact_phone }
+
+###### Response
+```
+
+{
+    "farmer": {
+        "id": 1,
+        "created_at": "2015-03-12T18:12:24.987Z",
+        "updated_at": "2015-03-12T20:34:28.108Z",
+        "location": "Atlanta",
+        "business_phone": "444-555-6666",
+        "farm": "Farm name",
+        "crop_names": "wheat",
+        "contact_name": "Bob the farmer",
+        "user_id": 7
+    }
+}
+```
+
 #Update Password
 
 #####Request:
