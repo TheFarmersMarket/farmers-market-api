@@ -105,6 +105,20 @@ creates a new user and resturns an authentication token.
     }
 }
 ```
+# Delete Farmer
+
+### /farmers/:id DELETE
+##### Mandatory Params
+* auth_token
+
+`Response:`
+`Status: 200 OK`
+```
+{
+    "farmer": "Farmer was deleted"
+}
+
+```
 
 #Update Password
 
