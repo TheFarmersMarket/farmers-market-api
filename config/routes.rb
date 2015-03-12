@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations",
                                     sessions: "sessions",
-                                    passwords: "passwords" }
+                                    passwords: "passwords" } 
+                                    
   resources :farmers, only: [:show, :destroy, :update, :edit]
 
   resources :customers, :only => [:edit, :show, :update, :destroy]

@@ -1,5 +1,5 @@
 class FarmersController < ApplicationController
-  before_action :authenticate_user_from_token!, only: [:update]
+  before_action :authenticate_user_from_token!, only: [:update, :destroy, :edit]
 
   def show
     @farmer = Farmer.find(params[:id])
@@ -12,6 +12,7 @@ class FarmersController < ApplicationController
 
   def update
     @farmer = Farmer.find(params[:id])
+    binding.pry
     @farmer.update(farmer_params)
     if @farmer.save
       render json: { farmer: @farmer }, status: :ok
