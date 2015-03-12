@@ -6,6 +6,10 @@ class FarmersController < ApplicationController
     render json: { farmer: @farmer }, status: :ok
   end
 
+  def edit
+    @farmer = Farmer.find(params[:id])
+  end
+
   def update
     @farmer = Farmer.find(params[:id])
     @farmer.update(farmer_params)
