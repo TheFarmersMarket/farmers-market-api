@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   end
 
   def as_json(opts={})
-    options = {:only => [:name, :email, :id, :authentication_token]}
+    options = {:only => [:email, :id, :authentication_token, :profile_type]}
     options.merge!(opts)
     super(options)
   end
