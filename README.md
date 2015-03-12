@@ -54,6 +54,7 @@ creates a new user and resturns an authentication token.
         "id": 4,
         "email": "not@real.com",
         "authentication_token": "a4enoRUA4GpVGHTEhEZc"
+        "profile_type": "farmer or customer"
     }
 }
 ```
