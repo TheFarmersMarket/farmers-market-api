@@ -87,7 +87,8 @@ creates a new user and resturns an authentication token.
 ###### Optional Params
 * farmer: {location: location, business_phone: business_phone, farm: farm, crop_names: crop_names, contact_phone: contact_phone }
 
-###### Response
+###### Response:
+`Status: 200 OK`
 ```
 
 {
