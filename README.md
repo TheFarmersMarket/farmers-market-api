@@ -12,6 +12,7 @@
 "user": {
   "email": "you@domain.com",
   "password": "8charsMinimum"
+  "profile_type": "farmer or customer"
   }
 ```
 #####Response:
@@ -25,6 +26,7 @@ creates a new user and resturns an authentication token.
         "id": 3,
         "email": "fake@fake.com",
         "authentication_token": "GRW2KfrvLRRqdiXiEHSb"
+        "profile_type": "farmer or customer"
     }
 }
 ```
