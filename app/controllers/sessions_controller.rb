@@ -4,7 +4,7 @@ class SessionsController < Devise::SessionsController
     if self.resource
       sign_in(resource_name, resource, store: false)
       if current_user.temp_password?
-        render json: { user: current_user, temp_password: true }, status: :ok
+        render json: { user: current_user, temp_password: true, profile_type: current_user.profile_type }, status: :ok
       else
         render json: { user: current_user }, status: :ok
       end
