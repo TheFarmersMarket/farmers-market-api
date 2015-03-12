@@ -12,7 +12,6 @@ class FarmersController < ApplicationController
 
   def update
     @farmer = Farmer.find(params[:id])
-    binding.pry
     @farmer.update(farmer_params)
     if @farmer.save
       render json: { farmer: @farmer }, status: :ok
@@ -29,7 +28,7 @@ class FarmersController < ApplicationController
 
   private
     def farmer_params
-      params.require(:farmer).permit(:location, :business_phone, :farm, :crops, :contact_name)
+      params.require(:farmer).permit(:location, :business_phone, :farm, :crop_names, :contact_name)
     end
 end
 
