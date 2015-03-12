@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :profile_type, inclusion: {:in => ["buyer", "farmer"] },
+  validates :profile_type, inclusion: {:in => ["customer", "farmer"] },
     presence: true
   after_create :create_profile!
   before_save :ensure_authentication_token
