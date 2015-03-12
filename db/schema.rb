@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150312150126) do
     t.string   "business_phone"
     t.string   "location"
     t.string   "contact_name"
+    t.integer  "user_id"
   end
 
   create_table "farmers", force: :cascade do |t|
