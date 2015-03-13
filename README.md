@@ -16,6 +16,7 @@
   }
 ```
 #####Response:
+######Returns farmer or customer id at the bottom of the response
 
 `Status: 201 Created`
 
