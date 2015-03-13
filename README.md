@@ -23,11 +23,12 @@ creates a new user and resturns an authentication token.
 ```json
 {
     "user": {
-        "id": 3,
-        "email": "fake@fake.com",
-        "authentication_token": "GRW2KfrvLRRqdiXiEHSb",
-        "profile_type": "farmer or customer"
-    }
+        "id": 15,
+        "email": "fake12@user.com",
+        "authentication_token": "auth-token-here",
+        "profile_type": "customer"
+    },
+    "customer": 1
 }
 ```
 
