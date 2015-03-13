@@ -16,6 +16,7 @@
   }
 ```
 #####Response:
+######Returns farmer or customer id at the bottom of the response
 
 `Status: 201 Created`
 
@@ -23,10 +24,11 @@ creates a new user and resturns an authentication token.
 ```json
 {
     "user": {
-        "id": 3,
-        "email": "fake@fake.com",
-        "authentication_token": "GRW2KfrvLRRqdiXiEHSb",
-        "profile_type": "farmer or customer"
+        "id": 25,
+        "email": "another187@user.com",
+        "authentication_token": "auth-token-here",
+        "profile_type": "farmer",
+        "farmer_id=": 7
     }
 }
 ```
