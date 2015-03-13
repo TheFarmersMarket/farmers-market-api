@@ -186,13 +186,18 @@ creates a new user and resturns an authentication token.
 #Update Password
 
 #####Request:
+##### Mandatory Params
+* auth_token
+* password
+* password_confirmation
 
 `PUT /users/password`
 
 ```json
 "user": {
-  "email": "you@domain.com",
+  "auth-token": "auth-token-goes-here",
   "password": "NewPassword8charsMinimum"
+  "password_confirmation": "NewPassword8charsMinimum"
   }
 ```
 #####Response:
@@ -206,6 +211,7 @@ creates a new user and returns an authentication token.
         "id": 5,
         "email": "b@b.com",
         "authentication_token": "3-3UyCnsEv2yh2v2gB6t"
+        "profile_type": "farmer"
     }
 }
 ```
