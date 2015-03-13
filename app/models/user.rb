@@ -26,10 +26,10 @@ class User < ActiveRecord::Base
 
   private
   def create_profile!
-    if self.profile_type == "buyer"
-      profile = Buyer.new
+    if self.profile_type == "customer"
+      profile = Customer.new
       profile.save(validate: false)
-      self.buyer = profile
+      self.customer = profile
     elsif self.profile_type == "farmer"
       profile = Farmer.new
       profile.save(validate: false)
