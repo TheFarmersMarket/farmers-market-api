@@ -62,6 +62,7 @@ creates a new user and resturns an authentication token.
 # Show Farmer
 
 ### /farmers/:id GET
+
 ##### Response:
 `Status: 200 OK`
 ```
@@ -108,6 +109,7 @@ creates a new user and resturns an authentication token.
 # Delete Farmer
 
 ### /farmers/:id DELETE
+
 ##### Mandatory Params
 * auth_token
 
@@ -116,6 +118,67 @@ creates a new user and resturns an authentication token.
 ```
 {
     "farmer": "Farmer was deleted"
+}
+
+```
+
+# Show Customer
+
+### /customers/:id GET
+
+##### Response:
+`Status: 200 OK`
+```
+{
+    "customer": {
+        "id": 1,
+        "created_at": "2015-03-12T18:12:24.987Z",
+        "updated_at": "2015-03-12T20:34:28.108Z",
+        "location": "Atlanta",
+        "business_phone": "444-555-6666",
+        "business_name": "longhorn",
+        "contact_name": "Bob",
+        "user_id": 7
+    }
+}
+```
+
+# Edit Customer Profile
+
+### /customers/:id PUT
+
+###### Optional Params
+* customer: {location: location, business_phone: business_phone, business: business_name, contact_name: contact_name}
+
+###### Response:
+`Status: 200 OK`
+```
+
+{
+    "customer": {
+        "id": 1,
+        "created_at": "2015-03-12T18:12:24.987Z",
+        "updated_at": "2015-03-12T20:34:28.108Z",
+        "location": "Atlanta",
+        "business_phone": "444-555-6666",
+        "business_name": "longhorn",
+        "contact_name": "Bob",
+        "user_id": 7
+    }
+}
+```
+# Delete customer
+
+### /customer/:id DELETE
+
+##### Mandatory Params
+* auth_token
+
+`Response:`
+`Status: 200 OK`
+```
+{
+    "customer": "customer was deleted"
 }
 
 ```
