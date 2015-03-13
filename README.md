@@ -199,7 +199,7 @@ creates a new user and resturns an authentication token.
 
 `Status: 200 OK`
 
-creates a new user and resturns an authentication token.
+creates a new user and returns an authentication token.
 ```json
 {
     "user": {
