@@ -28,7 +28,7 @@ creates a new user and resturns an authentication token.
         "email": "another187@user.com",
         "authentication_token": "auth-token-here",
         "profile_type": "farmer",
-        "farmer_id=": 7
+        "farmer_id": 7
     }
 }
 ```
