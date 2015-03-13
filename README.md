@@ -187,15 +187,18 @@ creates a new user and resturns an authentication token.
 
 #####Request:
 ##### Mandatory Params
-* auth_token
+* auth_token - passed in headers
 * password
 * password_confirmation
 
 `PUT /users/password`
 
 ```json
-"user": {
+"header" {
   "auth-token": "auth-token-goes-here",
+}
+
+"user": {
   "password": "NewPassword8charsMinimum"
   "password_confirmation": "NewPassword8charsMinimum"
   }
