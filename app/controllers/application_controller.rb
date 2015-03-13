@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
+  before_action :force_json_response!
 
   def authenticate_user_from_token!
     user_token = request.headers['auth-token']
@@ -14,6 +15,10 @@ class ApplicationController < ActionController::Base
       render json: { :error => "Authentication Failed!" },
              status: :unauthenticated
     end
+  end
+
+  def force_json_response!
+    request.format = :json
   end
 
   rescue_from ActiveRecord::RecordNotFound do
