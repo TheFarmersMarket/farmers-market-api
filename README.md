@@ -213,7 +213,7 @@ creates a new user and returns an authentication token.
     "user": {
         "id": 5,
         "email": "b@b.com",
-        "authentication_token": "3-3UyCnsEv2yh2v2gB6t"
+        "authentication_token": "3-3UyCnsEv2yh2v2gB6t",
         "profile_type": "farmer"
     }
 }
