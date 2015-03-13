@@ -5,10 +5,13 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     @user = User.new(user_params)
     if @user.save
-      render json: { user: @user }, status: :created
-    else
-      render json: { messages: @user.errors.full_messages },
-             status: :unprocessable_entity
+      if @user.profile_type == "farmer" 
+        render json: { user: @user, farmer: @user.farmer.id }, status: :created
+      elsif @user.profile_type == "customer"
+        render json: { user: @user, customer: @user.customer.id }, status: :created
+      else
+        render json: { messages: @user.errors.full_messages }, status: :unprocessable_entity
+      end
     end
   end
 
