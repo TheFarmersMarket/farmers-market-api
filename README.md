@@ -11,7 +11,7 @@
 ```json
 "user": {
   "email": "you@domain.com",
-  "password": "8charsMinimum"
+  "password": "8charsMinimum",
   "profile_type": "farmer or customer"
   }
 ```
@@ -25,7 +25,7 @@ creates a new user and resturns an authentication token.
     "user": {
         "id": 3,
         "email": "fake@fake.com",
-        "authentication_token": "GRW2KfrvLRRqdiXiEHSb"
+        "authentication_token": "GRW2KfrvLRRqdiXiEHSb",
         "profile_type": "farmer or customer"
     }
 }
@@ -53,7 +53,7 @@ creates a new user and resturns an authentication token.
     "user": {
         "id": 4,
         "email": "not@real.com",
-        "authentication_token": "a4enoRUA4GpVGHTEhEZc"
+        "authentication_token": "a4enoRUA4GpVGHTEhEZc",
         "profile_type": "farmer or customer"
     }
 }
@@ -199,7 +199,7 @@ creates a new user and resturns an authentication token.
 }
 
 "user": {
-  "password": "NewPassword8charsMinimum"
+  "password": "NewPassword8charsMinimum",
   "password_confirmation": "NewPassword8charsMinimum"
   }
 ```
