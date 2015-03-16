@@ -221,3 +221,36 @@ creates a new user and returns an authentication token.
 }
 ```
 
+#Create a Crop
+
+#####Request:
+
+`POST /crops`
+
+```json
+"crop": {
+  "price": "100.00 per bushel",
+  "currency": "USD",
+  "quantity": "50 bushels",
+  "crop_name": "corn"
+  }
+```
+#####Response:
+######Returns crop info with farmer_id
+
+`Status: 201 Created`
+
+creates a new crop 
+```json
+{
+    "crop": {
+        "id": 1,
+        "price": "100.00 per bushel",
+        "currency": "USD",
+        "quantity": "50 bushels",
+        "crop_name": "corn",
+        "farmer_id": 7
+    }
+}
+```
+
