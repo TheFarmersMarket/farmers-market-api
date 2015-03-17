@@ -11,9 +11,8 @@ class CropsController < ApplicationController
 
   def update
     @crop = Crop.find(params[:id])
-    @crop.update(crop_params)
-    if @crop.save
-      render json: { crop: @crop }, status: :updated
+    if @crop.update(crop_params)
+      render json: { crop: @crop }, status: :ok
     else
       render json: { messages: @crop.errors.full_messages }, status: :unprocessable_entity
     end
