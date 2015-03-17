@@ -4,8 +4,10 @@ Rails.application.routes.draw do
                                     passwords: "passwords" } 
   resources :farmers, only: [:show, :destroy, :update, :edit]
   resources :customers, :only => [:edit, :show, :update, :destroy]
-
   resources :crops, :only => [:create, :update, :destroy]
+  get '/searches/search', to: 'searches#search', as: 'searches_search'
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
