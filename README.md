@@ -221,3 +221,70 @@ creates a new user and returns an authentication token.
 }
 ```
 
+#Create a Crop
+
+#####Request:
+
+`POST /crops`
+
+```json
+"crop": {
+  "price": "100.00 per bushel",
+  "currency": "USD",
+  "quantity": "50 bushels",
+  "crop_name": "corn"
+  }
+```
+#####Response:
+######Returns crop info with farmer_id
+
+`Status: 201 Created`
+
+creates a new crop 
+```json
+{
+    "crop": {
+        "id": 1,
+        "price": "100.00 per bushel",
+        "currency": "USD",
+        "quantity": "50 bushels",
+        "crop_name": "corn",
+        "farmer_id": 7
+    }
+}
+```
+
+# Edit Crops
+
+### /crops/:id PUT
+
+###### Response:
+`Status: 200 OK`
+```
+
+{
+    "crop": {
+        "id": 1,
+        "created_at": "2015-03-12T18:12:24.987Z",
+        "updated_at": "2015-03-12T20:34:28.108Z",
+        "farmer_id": 2,
+        "price": "100.00",
+        "currency": "USD",
+        "quantity": "250",
+        "crop_name": "corn",
+    }
+}
+```
+
+# Delete crop
+
+### /crop/:id DELETE
+
+`Response:`
+`Status: 200 OK`
+```
+{
+    "crop": "crop was deleted"
+}
+
+```
