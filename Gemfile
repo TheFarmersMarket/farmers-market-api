@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+ruby '2.1.5'
+
+gem 'pg_search'
 gem 'rails-erd'
 gem 'devise'
 gem 'will_paginate', '~> 3.0.6'
