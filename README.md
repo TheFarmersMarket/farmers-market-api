@@ -254,3 +254,37 @@ creates a new crop
 }
 ```
 
+# Edit Crops
+
+### /crops/:id PUT
+
+###### Response:
+`Status: 200 OK`
+```
+
+{
+    "crop": {
+        "id": 1,
+        "created_at": "2015-03-12T18:12:24.987Z",
+        "updated_at": "2015-03-12T20:34:28.108Z",
+        "farmer_id": 2,
+        "price": "100.00",
+        "currency": "USD",
+        "quantity": "250",
+        "crop_name": "corn",
+    }
+}
+```
+
+# Delete crop
+
+### /crop/:id DELETE
+
+`Response:`
+`Status: 200 OK`
+```
+{
+    "crop": "crop was deleted"
+}
+
+```
