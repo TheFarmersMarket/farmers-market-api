@@ -9,6 +9,15 @@ class CustomersController < ApplicationController
     render json: {:customer => @customer}
   end
 
+  def search
+    if params[:query]
+      @customers = Customer.search(params[:query])
+      render json: { customers: @customers }
+    else
+      render json: { message: "Non searchable query" }
+    end
+  end
+
   def update
     @customer = Customer.find(params[:id])
     @customer.update(customer_params)

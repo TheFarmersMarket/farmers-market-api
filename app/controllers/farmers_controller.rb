@@ -6,6 +6,15 @@ class FarmersController < ApplicationController
     render json: { farmer: @farmer }, status: :ok
   end
 
+  def search
+    if params[:query]
+      @farmers = Farmer.search(params[:query])
+      render json: { farmer: @farmers }
+    else
+      render json: { mesage: "Non searchable query" }
+    end
+  end
+
   def edit
     @farmer = Farmer.find(params[:id])
   end
