@@ -312,7 +312,7 @@ creates a new crop
 }
 ```
 
-# Delete crop
+# Delete Crop
 
 ### /crop/:id DELETE
 
