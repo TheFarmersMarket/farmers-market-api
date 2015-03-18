@@ -13,7 +13,7 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
     @customer.update(customer_params)
     if @customer.save!
-      render json: {:customer => @customer}, status: :updated
+      render json: {:customer => @customer}, status: :ok
     else
       render json: {messages: @customer.errors.full_messages},
                     status: :unprocessable_entity
