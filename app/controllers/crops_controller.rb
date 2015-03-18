@@ -2,7 +2,7 @@ class CropsController < ApplicationController
   before_action :authenticate_user_from_token!, only: [:create, :update, :destroy]
 
   def create
-    @crop = Crop.new(crop_params)
+    @crop = current_user.farmer.crops.build(crop_params)
     if @crop.save
       render "crop/create.json.jbuilder", status: :created
     else 
@@ -27,6 +27,6 @@ class CropsController < ApplicationController
 
   private
   def crop_params
-    params.require(:crop).permit(:price, :currency, :quantity, :crop_name)
+    params.require(:crop).permit(:price, :currency, :quantity, :crop_name, :farmer_id)
   end
 end
