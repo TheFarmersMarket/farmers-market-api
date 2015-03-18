@@ -8,6 +8,9 @@ class Farmer < ActiveRecord::Base
 
   has_attached_file :avatar, styles: { :thumb => "200x200", :medium => "300x300" }
 
-  validates_attachment :avatar, content_type: { :content_type => "image/jpeg"},
-        size: { :in => 0..1.megabytes }
+  validates_attachment :avatar, content_type: { :content_type => ["image/jpeg", "image/gif", "image/png"]}
+
+  validates_with AttachmentSizeValidator, :attributes => :profile, :less_than => 2.megabytes
+  validates_attachment_file_name :profile, :matches => [/png\Z/, /jpe?g\Z/]
+
 end
