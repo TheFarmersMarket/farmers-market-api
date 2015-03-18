@@ -253,6 +253,42 @@ creates a new crop
     }
 }
 ```
+# Show Crop
+
+### /farmers/:farmer_id/crops GET
+
+##### Response:
+`Status: 200 OK`
+```
+{
+    "crops": [
+        {
+            "id": 37,
+            "farmer_id": 33,
+            "price": "14.40",
+            "currency": "$USD",
+            "quantity": "587",
+            "crop_name": "potatoes"
+        },
+        {
+            "id": 23,
+            "farmer_id": 33,
+            "price": "37.33",
+            "currency": "$USD",
+            "quantity": "509",
+            "crop_name": "wheat"
+        },
+        {
+            "id": 41,
+            "farmer_id": 33,
+            "price": "94.75",
+            "currency": "$USD",
+            "quantity": "367",
+            "crop_name": "strawberries"
+        }
+    ]
+}
+```
 
 # Edit Crops
 
@@ -276,7 +312,7 @@ creates a new crop
 }
 ```
 
-# Delete crop
+# Delete Crop
 
 ### /crop/:id DELETE
 

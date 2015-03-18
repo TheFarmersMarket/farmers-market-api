@@ -13,6 +13,8 @@ class FarmersController < ApplicationController
   def crops
     @farmer = Farmer.find(params[:farmer_id])
     @crops = @farmer.crops
+    # render json: { crops: @crops }, status: :ok
+    render "farmer/crops.json.jbuilder", status: :ok
   end
 
   def update
