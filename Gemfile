@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+ruby '2.1.5'
+
+gem 'pg_search'
 gem 'rails-erd'
 gem 'devise'
 gem 'will_paginate', '~> 3.0.6'
@@ -40,6 +43,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry'
   gem 'better_errors'
+  gem 'faker'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

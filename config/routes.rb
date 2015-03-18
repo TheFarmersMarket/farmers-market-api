@@ -2,12 +2,14 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations",
                                     sessions: "sessions",
                                     passwords: "passwords" } 
-                                    
-  resources :farmers, only: [:show, :destroy, :update, :edit]
-
+  resources :farmers, only: [:show, :destroy, :update, :edit] do
+    get 'crops', to: 'farmers#crops'
+  end
   resources :customers, :only => [:edit, :show, :update, :destroy]
-
   resources :crops, :only => [:create, :update, :destroy]
+  get '/searches/search', to: 'searches#search', as: 'searches_search'
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

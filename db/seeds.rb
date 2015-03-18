@@ -5,3 +5,29 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require "faker"
+include Faker
+
+50.times do 
+  crop = Crop.create(
+    :price => Commerce.price,
+    :currency => "$USD",
+    :quantity => Number.number(3))
+
+  farmer = Farmer.create(
+    :business_phone => PhoneNumber.phone_number,
+    :farm => Company.name,
+    :crop_names => "soy, wheat, corn",
+    :location => Address.city,
+    :contact_name => Name.name)
+
+  customer = Customer.create(
+    :business => Company.name,
+    :business_phone => PhoneNumber.phone_number,
+    :location => Address.city,
+    :contact_name => Name.name)
+end
+
+
+
