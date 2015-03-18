@@ -5,9 +5,9 @@ class Farmer < ActiveRecord::Base
   has_many :customers, through: :orders
   include PgSearch
   multisearchable :against => [:business_phone, :farm, :crop_names, :contact_name]
-  has_attached_file :profile, :styles => { :large => "800x800", :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-  validates_attachment :profile, :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
+  has_attached_file :avatar, :styles => { :large => "800x800", :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  validates_attachment :avatar, :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
   validates_with AttachmentSizeValidator, :attributes => :profile, :less_than => 2.megabytes
-  validates_attachment_file_name :profile, :matches => [/png\Z/, /jpe?g\Z/]
+  validates_attachment_file_name :avatar, :matches => [/png\Z/, /jpe?g\Z/]
 
 end
