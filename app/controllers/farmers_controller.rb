@@ -10,6 +10,11 @@ class FarmersController < ApplicationController
     @farmer = Farmer.find(params[:id])
   end
 
+  def crops
+    @farmer = Farmer.find(params[:farmer_id])
+    @crops = @farmer.crops
+  end
+
   def update
     @farmer = Farmer.find(params[:id])
     @farmer.update(farmer_params)

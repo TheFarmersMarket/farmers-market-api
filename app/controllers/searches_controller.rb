@@ -3,8 +3,8 @@ class SearchesController < ApplicationController
 
   def search
     if params[:query]
-      @search = PgSearch.multisearch(params[:query])
-      render json: { search: @search }
+      @results = PgSearch.multisearch(params[:query])
+      render "searches/search.json.jbuilder", status: :ok
     else
       render json: { message: "Non searchable query" }
     end

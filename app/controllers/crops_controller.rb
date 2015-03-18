@@ -1,9 +1,10 @@
 class CropsController < ApplicationController
+  before_action :authenticate_user_from_token!, only: [:create, :update, :destroy]
 
   def create
     @crop = Crop.new(crop_params)
     if @crop.save
-      render json: { crop: @crop }, status: :created
+      render "crop/create.json.jbuilder", status: :created
     else 
       render json: { messages: @crop.errors.full_messages }, status: :unprocessable_entity
     end
@@ -12,7 +13,7 @@ class CropsController < ApplicationController
   def update
     @crop = Crop.find(params[:id])
     if @crop.update(crop_params)
-      render json: { crop: @crop }, status: :ok
+      render "crop/update.json.jbuilder", status: :created
     else
       render json: { messages: @crop.errors.full_messages }, status: :unprocessable_entity
     end
