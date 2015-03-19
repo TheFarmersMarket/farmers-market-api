@@ -36,7 +36,7 @@ class FarmersController < ApplicationController
   def pic
     @farmer = Farmer.find(params[:farmer_id])
     @farmer.update(pic_params)
-    render json: { pic: @farmer.avatar.url(:medium) }, status: :created
+    render json: { pic: @farmer.avatar.url(:thumb) }, status: :created
   end
 
   private
