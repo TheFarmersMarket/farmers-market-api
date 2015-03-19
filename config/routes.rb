@@ -4,6 +4,7 @@ Rails.application.routes.draw do
                                     passwords: "passwords" } 
   resources :farmers, only: [:show, :destroy, :update, :edit] do
     get 'crops', to: 'farmers#crops'
+    put 'pic', to: 'farmers#pic'
   end
   resources :customers, :only => [:edit, :show, :update, :destroy]
   resources :crops, :only => [:create, :update, :destroy]

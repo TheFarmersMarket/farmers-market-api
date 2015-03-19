@@ -33,9 +33,10 @@ class FarmersController < ApplicationController
     render json: { farmer: "Farmer was deleted" }, status: :ok
   end
 
-  def profile_pic
-    @farmer = Farmer.find(params[:id])
+  def pic
+    @farmer = Farmer.find(params[:farmer_id])
     @farmer.update(pic_params)
+    render json: { pic: @farmer.avatar.url(:medium) }, status: :created
   end
 
   private
