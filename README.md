@@ -188,7 +188,7 @@ creates a new user and resturns an authentication token.
 #Update Password
 
 #####Request:
-##### Mandatory Params
+##### Required Params
 * auth_token - passed in headers
 * password
 * password_confirmation
@@ -322,5 +322,42 @@ creates a new crop
 {
     "crop": "crop was deleted"
 }
+```
 
+# Search 
+
+##### Required Params
+* auth_token - passed in headers
+* query - crop name, business contact name, location, etc..
+
+#####Request:
+
+`GET /searches/search`
+
+```json
+  {
+  "query": "corn",
+  "auth-token": "auth-token-here"
+  }
+```
+
+##### Response:
+`Status: 200 OK`
+```
+{
+    "search": [
+        {
+            "result_id": 2,
+            "result_type": "Farmer",
+            "result_match": "(770) 712-6789 Atlanta Farms cotton, corn ",
+            "result_url": "/farmers/2"
+        },
+        {
+            "result_id": 28,
+            "result_type": "Crop",
+            "result_match": "Corn",
+            "result_url": "/crops/28"
+        }
+    ]
+}
 ```
