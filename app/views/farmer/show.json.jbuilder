@@ -8,5 +8,5 @@ json.farmer do
 end
 
 json.avatar do 
-    json.avatar @farmer.avatar.url(:thumb)
+    json.avatar @farmer.avatar.url(:medium)
 end
