@@ -36,11 +36,11 @@ ActiveRecord::Schema.define(version: 20150318132140) do
   create_table "customers", force: :cascade do |t|
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.integer  "user_id"
     t.string   "business"
     t.string   "business_phone"
     t.string   "location"
     t.string   "contact_name"
+    t.integer  "user_id"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
@@ -50,12 +50,12 @@ ActiveRecord::Schema.define(version: 20150318132140) do
   create_table "farmers", force: :cascade do |t|
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.integer  "user_id"
     t.string   "location"
     t.string   "business_phone"
     t.string   "farm"
     t.text     "crop_names"
     t.string   "contact_name"
+    t.integer  "user_id"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
@@ -93,10 +93,6 @@ ActiveRecord::Schema.define(version: 20150318132140) do
     t.string   "authentication_token"
     t.boolean  "temp_password"
     t.string   "profile_type"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", using: :btree
