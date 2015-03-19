@@ -3,7 +3,7 @@ class FarmersController < ApplicationController
 
   def show
     @farmer = Farmer.find(params[:id])
-    render json: { farmer: @farmer }, status: :ok
+    render "farmer/show.json.jbuilder", status: :ok
   end
 
   def edit
