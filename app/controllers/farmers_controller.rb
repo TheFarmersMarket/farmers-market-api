@@ -33,9 +33,18 @@ class FarmersController < ApplicationController
     render json: { farmer: "Farmer was deleted" }, status: :ok
   end
 
+  def profile_pic
+    @farmer = Farmer.find(params[:id])
+    @farmer.update(pic_params)
+  end
+
   private
-    def farmer_params
-      params.require(:farmer).permit(:location, :business_phone, :farm, :crop_names, :contact_name, :avatar)
-    end
+  def farmer_params
+    params.require(:farmer).permit(:location, :business_phone, :farm, :crop_names, :contact_name)
+  end
+
+  def pic_params
+    params.require(:farmer).permit(:avatar)
+  end
 end
 
