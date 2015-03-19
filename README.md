@@ -327,7 +327,7 @@ creates a new crop
 # Search 
 
 ##### Required Params
-* auth_token - passed in headers
+* auth-token - passed in headers
 * query - crop name, business contact name, location, etc..
 
 #####Request:
