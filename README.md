@@ -324,3 +324,7 @@ creates a new crop
 }
 
 ```
+
+# Create Avatar for Farmer
+
+### /
