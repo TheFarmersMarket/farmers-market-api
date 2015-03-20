@@ -138,7 +138,7 @@ creates a new user and resturns an authentication token.
         "updated_at": "2015-03-12T20:34:28.108Z",
         "location": "Atlanta",
         "business_phone": "444-555-6666",
-        "business_name": "longhorn",
+        "business": "longhorn",
         "contact_name": "Bob",
         "user_id": 7
     }
@@ -150,7 +150,7 @@ creates a new user and resturns an authentication token.
 ### /customers/:id PUT
 
 ###### Optional Params
-* customer: {location: location, business_phone: business_phone, business: business_name, contact_name: contact_name}
+* customer: {location: location, business_phone: business_phone, business: business, contact_name: contact_name}
 
 ###### Response:
 `Status: 200 OK`
@@ -163,7 +163,7 @@ creates a new user and resturns an authentication token.
         "updated_at": "2015-03-12T20:34:28.108Z",
         "location": "Atlanta",
         "business_phone": "444-555-6666",
-        "business_name": "longhorn",
+        "business": "longhorn",
         "contact_name": "Bob",
         "user_id": 7
     }
