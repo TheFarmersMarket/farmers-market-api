@@ -9,5 +9,6 @@ class Farmer < ActiveRecord::Base
   validates_attachment :avatar, :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
   validates_with AttachmentSizeValidator, :attributes => :avatar, :less_than => 2.megabytes
   validates_attachment_file_name :avatar, :matches => [/png\Z/, /jpe?g\Z/]
+  acts_as_followable
 
 end
