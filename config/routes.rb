@@ -6,9 +6,13 @@ Rails.application.routes.draw do
     get 'crops', to: 'farmers#crops'
     put 'pic', to: 'farmers#pic'
   end
-  resources :customers, :only => [:edit, :show, :update, :destroy]
+  resources :customers, :only => [:edit, :show, :update, :destroy] #do
+    
+    #domain.com/customers/follow
+  # end
   resources :crops, :only => [:create, :update, :destroy]
   get '/searches/search', to: 'searches#search', as: 'searches_search'
+  post 'customers/:id/follow', to: 'customers#follow'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
