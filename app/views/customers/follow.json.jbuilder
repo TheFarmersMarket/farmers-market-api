@@ -4,5 +4,5 @@ json.follow do
   json.followers_count @farmer.followers_count
   json.customer_id @customer.id
   json.customer_name @customer.contact_name
-  json.follow_counr @customer.follow_count
+  json.follow_count @customer.follow_count
 end 
