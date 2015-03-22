@@ -410,7 +410,7 @@ creates a new crop
         "followers_count": 1,
         "customer_id": 62,
         "customer_name": Tiger Woods,
-        "follow_counr": 12
+        "follow_count": 12
     }
 }
 ```
