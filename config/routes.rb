@@ -9,9 +9,7 @@ Rails.application.routes.draw do
   resources :customers, :only => [:edit, :show, :update, :destroy] do
     put 'pic', to: 'customers#pic'
   end
-  resources :crops, :only => [:create, :update, :destroy] do
-    put 'pic', to: 'crops#pic'
-  end
+  resources :crops, :only => [:create, :update, :destroy]
   get '/searches/search', to: 'searches#search', as: 'searches_search'
   post 'customers/:id/follow', to: 'customers#follow'
   
