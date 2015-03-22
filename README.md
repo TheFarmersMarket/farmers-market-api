@@ -407,10 +407,10 @@ creates a new crop
     "follow": {
         "farmer_id": 34,
         "farmer_name": "Miss Marilyne Wyman",
-        "followers_count": 1,
+        "farmer_followers_count": 1,
         "customer_id": 62,
         "customer_name": Tiger Woods,
-        "follow_count": 12
+        "customer_follow_count": 12
     }
 }
 ```
