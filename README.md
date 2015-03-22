@@ -398,6 +398,7 @@ creates a new crop
 # Follow Farmer
 ### /customers/:id/follow POST
 * auth-token - passed in headers
+
 ###### Response:
 `Status: 201 Created`
 ```
@@ -407,7 +408,7 @@ creates a new crop
         "farmer_name": "Miss Marilyne Wyman",
         "followers_count": 1,
         "customer_id": 62,
-        "customer_name": null,
+        "customer_name": Tiger Woods,
         "follow_counr": 12
     }
 }
