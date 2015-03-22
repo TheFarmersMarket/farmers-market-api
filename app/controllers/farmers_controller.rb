@@ -3,7 +3,7 @@ class FarmersController < ApplicationController
 
   def show
     @farmer = Farmer.find(params[:id])
-    render "farmer/show.json.jbuilder", status: :ok
+    render :show, status: :ok
   end
 
   def edit
@@ -14,7 +14,7 @@ class FarmersController < ApplicationController
     @farmer = Farmer.find(params[:farmer_id])
     @crops = @farmer.crops
     # render json: { crops: @crops }, status: :ok
-    render "farmer/crops.json.jbuilder", status: :ok
+    render :crops, status: :ok
   end
 
   def update

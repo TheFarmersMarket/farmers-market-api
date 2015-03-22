@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
 
   def show
     @customer = Customer.find(params[:id])
-    render "customers/show.json.jbuilder", status: :ok
+    render :show, status: :ok
   end
 
   def update
