@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320210208) do
+ActiveRecord::Schema.define(version: 20150322201054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,23 +24,27 @@ ActiveRecord::Schema.define(version: 20150320210208) do
   end
 
   create_table "crops", force: :cascade do |t|
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.integer  "farmer_id"
-    t.string   "price",      default: "0.0"
+    t.string   "price",               default: "0.0"
     t.string   "currency"
     t.string   "quantity"
     t.string   "crop_name"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "customers", force: :cascade do |t|
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "user_id"
     t.string   "business"
     t.string   "business_phone"
     t.string   "location"
     t.string   "contact_name"
-    t.integer  "user_id"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
@@ -50,12 +54,12 @@ ActiveRecord::Schema.define(version: 20150320210208) do
   create_table "farmers", force: :cascade do |t|
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "user_id"
     t.string   "location"
     t.string   "business_phone"
     t.string   "farm"
     t.text     "crop_names"
     t.string   "contact_name"
-    t.integer  "user_id"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
@@ -106,6 +110,10 @@ ActiveRecord::Schema.define(version: 20150320210208) do
     t.string   "authentication_token"
     t.boolean  "temp_password"
     t.string   "profile_type"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", using: :btree
