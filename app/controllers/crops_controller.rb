@@ -25,8 +25,18 @@ class CropsController < ApplicationController
     render json: { crop: "Crop was Deleted!" }, status: :ok
   end
 
+  def pic
+    @crop = Crop.find(params[:crop_id])
+    @crop.update(pic_params)
+    render json: { pic: @crop.avatar.url(:medium)}, status: :created
+  end
+
   private
   def crop_params
     params.require(:crop).permit(:price, :currency, :quantity, :crop_name, :farmer_id)
+  end
+
+  def pic_params
+    params.require(:crop).permit(:avatar)
   end
 end

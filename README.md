@@ -267,15 +267,17 @@ creates a new crop
 `Status: 200 OK`
 ```
 {
-    "crops": [
-        {
+    "crops": {
             "id": 37,
             "farmer_id": 33,
             "price": "14.40",
             "currency": "$USD",
             "quantity": "587",
             "crop_name": "potatoes"
-        },
+        }
+    "avatar": {
+             "avatar": "image url"
+      },
         {
             "id": 23,
             "farmer_id": 33,
@@ -283,7 +285,10 @@ creates a new crop
             "currency": "$USD",
             "quantity": "509",
             "crop_name": "wheat"
-        },
+        }
+    "avatar": {
+             "avatar": "image url"
+      },
         {
             "id": 41,
             "farmer_id": 33,
@@ -292,7 +297,9 @@ creates a new crop
             "quantity": "367",
             "crop_name": "strawberries"
         }
-    ]
+    "avatar": {
+             "avatar": "image url"
+      }
 }
 ```
 
@@ -413,4 +420,17 @@ creates a new crop
         "customer_follow_count": 12
     }
 }
+```
+# Create Picture For Crops
+
+### /crops/:crop_id/pic PUT
+
+###### Responese:
+`Status: 201 Created`
+```
+
+{
+  "avatar": "image url"
+  }
+
 ```
