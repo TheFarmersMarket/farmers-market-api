@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
   resources :crops, :only => [:create, :update, :destroy]
   get '/searches/search', to: 'searches#search', as: 'searches_search'
+  post 'customers/:id/follow', to: 'customers#follow'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
