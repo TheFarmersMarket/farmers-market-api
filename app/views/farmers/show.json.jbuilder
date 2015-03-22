@@ -1,5 +1,6 @@
 json.farmer do
-  json.location @farmer.id
+  json.id @farmer.id
+  json.location @farmer.location
   json.business_phone @farmer.business_phone
   json.farm @farmer.farm
   json.crop_names @farmer.crop_names

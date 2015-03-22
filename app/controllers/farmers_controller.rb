@@ -20,11 +20,7 @@ class FarmersController < ApplicationController
   def update
     @farmer = Farmer.find(params[:id])
     @farmer.update(farmer_params)
-    if @farmer.save
-      render json: { farmer: @farmer }, status: :ok
-    else
-      render json: { message: "Farmer profile not updated" }, status: :unprocessable_entity
-    end
+    render json: { farmer: @farmer }, status: :ok
   end
 
   def destroy
