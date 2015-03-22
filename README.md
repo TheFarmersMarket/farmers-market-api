@@ -397,6 +397,7 @@ creates a new crop
 ```
 # Follow Farmer
 ### /customers/:id/follow POST
+##### Required Params
 * auth-token - passed in headers
 
 ###### Response:
