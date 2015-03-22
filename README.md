@@ -79,6 +79,9 @@ creates a new user and resturns an authentication token.
         "crop_names": "wheat",
         "contact_name": "Bob the farmer",
         "user_id": 7
+    },
+    "avatar": {
+      "avatar": "image url"
     }
 }
 ```
@@ -141,6 +144,9 @@ creates a new user and resturns an authentication token.
         "business": "longhorn",
         "contact_name": "Bob",
         "user_id": 7
+    },
+    "avatar": {
+      "avatar": "image url"
     }
 }
 ```
@@ -361,3 +367,32 @@ creates a new crop
     ]
 }
 ```
+
+# Create Avatar for Farmer
+
+### /farmers/:farmer_id/pic PUT
+
+###### Responese:
+`Status: 201 Created`
+```
+
+{
+  "avatar": "image url"
+  }
+
+```
+
+# Create Avatar for Customer
+
+### /customers/:customer_id/pic PUT
+
+###### Responese:
+`Status: 201 Created`
+```
+
+{
+  "avatar": "image url"
+  }
+
+```
+

@@ -4,7 +4,7 @@ class CropsController < ApplicationController
   def create
     @crop = current_user.farmer.crops.build(crop_params)
     if @crop.save
-      render "crop/create.json.jbuilder", status: :created
+      render :create, status: :created
     else 
       render json: { messages: @crop.errors.full_messages }, status: :unprocessable_entity
     end
@@ -13,7 +13,7 @@ class CropsController < ApplicationController
   def update
     @crop = Crop.find(params[:id])
     if @crop.update(crop_params)
-      render "crop/update.json.jbuilder", status: :created
+      render :update, status: :created
     else
       render json: { messages: @crop.errors.full_messages }, status: :unprocessable_entity
     end

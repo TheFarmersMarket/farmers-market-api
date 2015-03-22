@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     get 'crops', to: 'farmers#crops'
     put 'pic', to: 'farmers#pic'
   end
-  resources :customers, :only => [:edit, :show, :update, :destroy]
+  resources :customers, :only => [:edit, :show, :update, :destroy] do
+    put 'pic', to: 'customers#pic'
+  end
   resources :crops, :only => [:create, :update, :destroy]
   get '/searches/search', to: 'searches#search', as: 'searches_search'
   
