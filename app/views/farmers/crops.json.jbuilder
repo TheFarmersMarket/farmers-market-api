@@ -1,5 +1,4 @@
 json.crop do
-  json.farmer_id @crops.farmer_id
   json.price @crops.price
   json.currency @crops.currency
   json.quantity @crops.quantity
