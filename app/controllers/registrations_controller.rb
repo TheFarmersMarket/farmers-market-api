@@ -1,6 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
-  skip_before_action :authenticate_scope!, :only => [:update]
-  before_action :authenticate_user_from_token!, :only => [:update]
+  skip_before_action :authenticate_scope!, :only => [:update, :destroy]
+  before_action :authenticate_user_from_token!, :only => [:update, :destroy]
 
   def create
     @user = User.new(user_params)
@@ -17,6 +17,11 @@ class RegistrationsController < Devise::RegistrationsController
     else
       render json: { error: "User info was not update" }, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    current_user.destroy
+    render json: { message: "User was Deleted" }, status: :ok
   end
 
   private
