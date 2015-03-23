@@ -4,6 +4,7 @@ json.search @results do |result|
     json.contact_name result.searchable.farmer.contact_name
     json.farm result.searchable.farmer.farm
     json.url url_for(result.searchable)
+    json.avatar result.searchable.avatar.url(:medium)
   elsif result.searchable.class == Farmer
     json.farmer_id result.searchable.id
     json.contact_name result.searchable.contact_name
@@ -16,3 +17,4 @@ json.search @results do |result|
     json.url url_for(result.searchable) 
   end
 end
+
