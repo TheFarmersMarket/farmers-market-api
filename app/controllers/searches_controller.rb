@@ -6,7 +6,7 @@ class SearchesController < ApplicationController
       @results = PgSearch.multisearch(params[:query])
       render "searches/search.json.jbuilder", status: :ok
     else
-      render json: { message: "Non searchable query" }
+      render json: { message: "Non searchable query" }, status: :unprocessable_entity
     end
   end
 end
