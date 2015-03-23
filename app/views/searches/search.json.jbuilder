@@ -1,6 +1,7 @@
 json.search @results do |result|
   if result.searchable.class == Crop
     json.farmer_id result.searchable.farmer.id
+    json.crop_id result.searchable.id
     json.contact_name result.searchable.farmer.contact_name
     json.farm result.searchable.farmer.farm
     json.crop_name result.searchable.crop_name
