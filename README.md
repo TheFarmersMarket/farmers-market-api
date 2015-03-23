@@ -348,9 +348,12 @@ creates a new crop
 `GET /searches/search`
 
 ```json
-  {
-  "query": "corn",
+  { 
   "auth-token": "auth-token-here"
+  }
+  
+  {
+  "query": "runte"
   }
 ```
 
@@ -360,16 +363,22 @@ creates a new crop
 {
     "search": [
         {
-            "result_id": 2,
-            "result_type": "Farmer",
-            "result_match": "(770) 712-6789 Atlanta Farms cotton, corn ",
-            "result_url": "/farmers/2"
+            "customer_id": 15,
+            "contact_name": "Hal Will",
+            "business": "Runte LLC",
+            "url": "/customers/15"
         },
         {
-            "result_id": 28,
-            "result_type": "Crop",
-            "result_match": "Corn",
-            "result_url": "/crops/28"
+            "farmer_id": 36,
+            "contact_name": "Maritza Schaefer",
+            "farm": "Runte Inc",
+            "url": "/farmers/36"
+        },
+        {
+            "farmer_id": 57,
+            "contact_name": "Margarita Kuhn MD",
+            "farm": "Runte-Kutch",
+            "url": "/farmers/57"
         }
     ]
 }
