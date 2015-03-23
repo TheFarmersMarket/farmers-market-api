@@ -27,6 +27,10 @@ class CropsController < ApplicationController
 
   private
   def crop_params
-    params.require(:crop).permit(:price, :currency, :quantity, :crop_name, :farmer_id)
+    params.require(:crop).permit(:price, :currency, :quantity, :crop_name, :farmer_id, :avatar)
   end
+
+  #def pic_params
+  #  params.require(:crop).permit(:avatar)
+  #end
 end
