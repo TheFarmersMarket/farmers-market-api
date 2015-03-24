@@ -13,7 +13,7 @@ include Faker
   crop = Crop.create(
     :price => Commerce.price,
     :currency => "$USD",
-    :quantity => Number.number(3))
+    :quantity => Number.number(3)) 
 
   farmer = Farmer.create(
     :business_phone => PhoneNumber.phone_number,
