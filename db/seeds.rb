@@ -9,7 +9,7 @@
 require "faker"
 include Faker
 
-25.times do 
+50.times do 
   crop = Crop.create(
     :price => Commerce.price,
     :currency => "$USD",
@@ -37,7 +37,7 @@ include Faker
   user = User.create(
     :email => Internet.email,
     :password => "password",
-    :profile_type => "farmer"
+    :profile_type => "customer"
     )
 end
 
