@@ -385,6 +385,7 @@ creates a new crop
 ### /customers/:id/follow POST
 ##### Required Params
 * auth-token - passed in headers
+* farmer[id]
 
 ###### Response:
 `Status: 201 Created`
@@ -430,3 +431,55 @@ creates a new crop
 
 ```
 
+# Farmer Profile Page
+
+### /farmers/:farmer_id/profile GET
+
+`Response:`
+`Status: 200 OK`
+```
+{
+  "farmer": {
+    "id": 54,
+    "location": "Atlanta, GA",
+    "business_phone": "(770 712-6287",
+    "farm": "Spencer's Farm",
+    "crop_names": "white corn, blackberries, carrots",
+    "contact_name": "Spencer Wyckoff",
+    "user_id": 70
+    "email": "string"
+  },
+  "crops": [
+  {
+    "id": 40,
+    "farmer_id": 54,
+    "price": "0.89",
+    "currency": "USD",
+    "quantity": "131 bushels",
+    "crop_name": "Carrots",
+    "avatar": "/images/original/missing.png"
+    },
+    {
+      "id": 41,
+      "farmer_id": 54,
+      "price": "3.23",
+      "currency": "USD",
+      "quantity": "37 bushels",
+      "crop_name": "blackberries",
+      "avatar": "/images/original/missing.png"
+      },
+      {
+        "id": 42,
+        "farmer_id": 54,
+        "price": "1.23",
+        "currency": "USD",
+        "quantity": "13",
+        "crop_name": "blackberries",
+        "avatar": "/images/original/missing.png"
+        }
+        ],
+        "avatar": {
+          "avatar": "/images/medium/missing.png"
+          }
+}
+```

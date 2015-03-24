@@ -35,6 +35,12 @@ class FarmersController < ApplicationController
     render json: { pic: @farmer.avatar.url(:medium) }, status: :created
   end
 
+  def profile
+    @farmer = Farmer.find(params[:farmer_id])
+    @crops = @farmer.crops
+    render :profile, status: :ok
+  end
+
   private
   def farmer_params
     params.require(:farmer).permit(:location, :business_phone, :farm, :crop_names, :contact_name)

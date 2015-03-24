@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :farmers, only: [:show, :destroy, :update, :edit] do
     get 'crops', to: 'farmers#crops'
     put 'pic', to: 'farmers#pic'
+    get 'profile', to: 'farmers#profile'
   end
   resources :customers, :only => [:edit, :show, :update, :destroy] do
     put 'pic', to: 'customers#pic'
@@ -12,7 +13,6 @@ Rails.application.routes.draw do
   resources :crops, :only => [:create, :update, :destroy]
   get '/searches/search', to: 'searches#search', as: 'searches_search'
   post 'customers/:id/follow', to: 'customers#follow'
-  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
