@@ -2,6 +2,6 @@ class FollowerEmailJob < ActiveJob::Base
   queue_as :default
 
   def perform()
-    # Do something later
+    FollowerMailer.follower_email.deliver_now
   end
 end

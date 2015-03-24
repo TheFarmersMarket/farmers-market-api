@@ -34,6 +34,7 @@ class CustomersController < ApplicationController
   def follow
     if current_user.id == @customer.user_id
       @customer.follow(@farmer)
+        
       render "customers/follow.json.jbuilder", status: :created
     else
       render json: { :error => "unauthorized"}, status: :not_found

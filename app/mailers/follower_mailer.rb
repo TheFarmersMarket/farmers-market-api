@@ -3,6 +3,6 @@ class FollowerMailer < ApplicationMailer
   
   def follower_email
     @user = user
-    mail(to: @user.email, subject: 'Farmer has uploaded crops')
+    mail(to: @user.email, subject: 'Your farmer has uploaded new crops')
   end
 end
