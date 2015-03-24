@@ -1,8 +1,7 @@
 class FollowerMailer < ApplicationMailer
-  default from: 'tiy-farmers-market.herokuapp.com'
-  
+
   def follower_email
-    @customer = 
-    mail(to: @customer.email, subject: 'something')
+    @user = user
+    mail(to: @customer.email, subject: 'Farmer has uploaded crops')
   end
 end
