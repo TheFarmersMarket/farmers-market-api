@@ -13,20 +13,31 @@ include Faker
   crop = Crop.create(
     :price => Commerce.price,
     :currency => "$USD",
-    :quantity => Number.number(3)) 
+    :quantity => Number.number(3), 
+    :farmer_id => rand(1..50)
+    )
 
   farmer = Farmer.create(
     :business_phone => PhoneNumber.phone_number,
     :farm => Company.name,
-    :crop_names => "soy, wheat, corn",
+    :crop_names => "soy, wheat, peaches, peanuts, pecans",
     :location => Address.city,
-    :contact_name => Name.name)
+    :contact_name => Name.name,
+    :user_id => rand(1..50)
+    )
 
   customer = Customer.create(
     :business => Company.name,
     :business_phone => PhoneNumber.phone_number,
     :location => Address.city,
-    :contact_name => Name.name)
+    :contact_name => Name.name,
+    :user_id => rand(1..50)
+    )
+  
+  user =  User.create(
+    :email => Internet.email,
+    :password => "password"
+    )
 end
 
 
