@@ -10,17 +10,7 @@
 
 ```json
 "user": {
-  "ndatory Params
-    * auth_token
-
-    `Response:`
-    `Status: 200 OK`
-    ```
-    {
-      "farmer": "Farmer was deleted"
-    }
-
-  ```email": "you@domain.com",
+    "email": "you@domain.com",
     "password": "8charsMinimum",
     "profile_type": "farmer or customer"
 }
