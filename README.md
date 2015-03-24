@@ -446,6 +446,7 @@ creates a new crop
     "crop_names": "white corn, blackberries, carrots",
     "contact_name": "Spencer Wyckoff",
     "user_id": 70
+    "email": "string"
   },
   "crops": [
   {

@@ -6,6 +6,7 @@ json.farmer do
   json.crop_names @farmer.crop_names
   json.contact_name @farmer.contact_name
   json.user_id @farmer.user_id
+  json.email @farmer.user.email
 end
 
 json.crops do
