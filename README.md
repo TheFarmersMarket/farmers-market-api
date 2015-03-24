@@ -385,6 +385,7 @@ creates a new crop
 ### /customers/:id/follow POST
 ##### Required Params
 * auth-token - passed in headers
+* farmer[id]
 
 ###### Response:
 `Status: 201 Created`
