@@ -423,7 +423,7 @@ creates a new crop
 
 `Response:`
 `Status: 200 OK`
-``
+```
 {
   "message": "User was deleted"
 }
