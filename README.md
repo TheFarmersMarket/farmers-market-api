@@ -10,10 +10,20 @@
 
 ```json
 "user": {
-  "email": "you@domain.com",
-  "password": "8charsMinimum",
-  "profile_type": "farmer or customer"
-  }
+  "ndatory Params
+    * auth_token
+
+    `Response:`
+    `Status: 200 OK`
+    ```
+    {
+      "farmer": "Farmer was deleted"
+    }
+
+  ```email": "you@domain.com",
+    "password": "8charsMinimum",
+    "profile_type": "farmer or customer"
+}
 ```
 #####Response:
 ######Returns farmer or customer id at the bottom of the response
@@ -23,13 +33,13 @@
 creates a new user and resturns an authentication token.
 ```json
 {
-    "user": {
-        "id": 25,
-        "email": "another187@user.com",
-        "authentication_token": "auth-token-here",
-        "profile_type": "farmer",
-        "farmer_id": 7
-    }
+  "user": {
+    "id": 25,
+      "email": "another187@user.com",
+      "authentication_token": "auth-token-here",
+      "profile_type": "farmer",
+      "farmer_id": 7
+  }
 }
 ```
 
@@ -42,8 +52,8 @@ creates a new user and resturns an authentication token.
 ```json
 "user": {
   "email": "you@domain.com",
-  "password": "8charsMinimum"
-  }
+    "password": "8charsMinimum"
+}
 ```
 #####Response:
 
@@ -52,12 +62,12 @@ creates a new user and resturns an authentication token.
 creates a new user and resturns an authentication token.
 ```json
 {
-    "user": {
-        "id": 4,
-        "email": "not@real.com",
-        "authentication_token": "a4enoRUA4GpVGHTEhEZc",
-        "profile_type": "farmer or customer"
-    }
+  "user": {
+    "id": 4,
+      "email": "not@real.com",
+      "authentication_token": "a4enoRUA4GpVGHTEhEZc",
+      "profile_type": "farmer or customer"
+  }
 }
 ```
 
@@ -69,17 +79,17 @@ creates a new user and resturns an authentication token.
 `Status: 200 OK`
 ```
 {
-    "farmer": {
-        "id": 1,
-        "created_at": "2015-03-12T18:12:24.987Z",
-        "updated_at": "2015-03-12T20:34:28.108Z",
-        "location": "Atlanta",
-        "business_phone": "444-555-6666",
-        "farm": "Farm name",
-        "crop_names": "wheat",
-        "contact_name": "Bob the farmer",
-        "user_id": 7
-    },
+  "farmer": {
+    "id": 1,
+      "created_at": "2015-03-12T18:12:24.987Z",
+      "updated_at": "2015-03-12T20:34:28.108Z",
+      "location": "Atlanta",
+      "business_phone": "444-555-6666",
+      "farm": "Farm name",
+      "crop_names": "wheat",
+      "contact_name": "Bob the farmer",
+      "user_id": 7
+  },
     "avatar": {
       "avatar": "image url"
     }
@@ -98,33 +108,18 @@ creates a new user and resturns an authentication token.
 ```
 
 {
-    "farmer": {
-        "id": 1,
-        "created_at": "2015-03-12T18:12:24.987Z",
-        "updated_at": "2015-03-12T20:34:28.108Z",
-        "location": "Atlanta",
-        "business_phone": "444-555-6666",
-        "farm": "Farm name",
-        "crop_names": "wheat",
-        "contact_name": "Bob the farmer",
-        "user_id": 7
-    }
+  "farmer": {
+    "id": 1,
+      "created_at": "2015-03-12T18:12:24.987Z",
+      "updated_at": "2015-03-12T20:34:28.108Z",
+      "location": "Atlanta",
+      "business_phone": "444-555-6666",
+      "farm": "Farm name",
+      "crop_names": "wheat",
+      "contact_name": "Bob the farmer",
+      "user_id": 7
+  }
 }
-```
-# Delete Farmer
-
-### /farmers/:id DELETE
-
-##### Mandatory Params
-* auth_token
-
-`Response:`
-`Status: 200 OK`
-```
-{
-    "farmer": "Farmer was deleted"
-}
-
 ```
 
 # Show Customer
@@ -135,16 +130,16 @@ creates a new user and resturns an authentication token.
 `Status: 200 OK`
 ```
 {
-    "customer": {
-        "id": 1,
-        "created_at": "2015-03-12T18:12:24.987Z",
-        "updated_at": "2015-03-12T20:34:28.108Z",
-        "location": "Atlanta",
-        "business_phone": "444-555-6666",
-        "business": "longhorn",
-        "contact_name": "Bob",
-        "user_id": 7
-    },
+  "customer": {
+    "id": 1,
+      "created_at": "2015-03-12T18:12:24.987Z",
+      "updated_at": "2015-03-12T20:34:28.108Z",
+      "location": "Atlanta",
+      "business_phone": "444-555-6666",
+      "business": "longhorn",
+      "contact_name": "Bob",
+      "user_id": 7
+  },
     "avatar": {
       "avatar": "image url"
     }
@@ -163,32 +158,17 @@ creates a new user and resturns an authentication token.
 ```
 
 {
-    "customer": {
-        "id": 1,
-        "created_at": "2015-03-12T18:12:24.987Z",
-        "updated_at": "2015-03-12T20:34:28.108Z",
-        "location": "Atlanta",
-        "business_phone": "444-555-6666",
-        "business": "longhorn",
-        "contact_name": "Bob",
-        "user_id": 7
-    }
+  "customer": {
+    "id": 1,
+      "created_at": "2015-03-12T18:12:24.987Z",
+      "updated_at": "2015-03-12T20:34:28.108Z",
+      "location": "Atlanta",
+      "business_phone": "444-555-6666",
+      "business": "longhorn",
+      "contact_name": "Bob",
+      "user_id": 7
+  }
 }
-```
-# Delete customer
-
-### /customer/:id DELETE
-
-##### Mandatory Params
-* auth_token
-
-`Response:`
-`Status: 200 OK`
-```
-{
-    "customer": "customer was deleted"
-}
-
 ```
 
 #Update Password
@@ -208,8 +188,8 @@ creates a new user and resturns an authentication token.
 
 "user": {
   "password": "NewPassword8charsMinimum",
-  "password_confirmation": "NewPassword8charsMinimum"
-  }
+    "password_confirmation": "NewPassword8charsMinimum"
+}
 ```
 #####Response:
 
@@ -218,12 +198,12 @@ creates a new user and resturns an authentication token.
 creates a new user and returns an authentication token.
 ```json
 {
-    "user": {
-        "id": 5,
-        "email": "b@b.com",
-        "authentication_token": "3-3UyCnsEv2yh2v2gB6t",
-        "profile_type": "farmer"
-    }
+  "user": {
+    "id": 5,
+      "email": "b@b.com",
+      "authentication_token": "3-3UyCnsEv2yh2v2gB6t",
+      "profile_type": "farmer"
+  }
 }
 ```
 
@@ -236,10 +216,10 @@ creates a new user and returns an authentication token.
 ```json
 "crop": {
   "price": "100.00 per bushel",
-  "currency": "USD",
-  "quantity": "50 bushels",
-  "crop_name": "corn"
-  }
+    "currency": "USD",
+    "quantity": "50 bushels",
+    "crop_name": "corn"
+}
 ```
 #####Response:
 ######Returns crop info with farmer_id
@@ -249,14 +229,14 @@ creates a new user and returns an authentication token.
 creates a new crop 
 ```json
 {
-    "crop": {
-        "id": 1,
-        "price": "100.00 per bushel",
-        "currency": "USD",
-        "quantity": "50 bushels",
-        "crop_name": "corn",
-        "farmer_id": 7
-    }
+  "crop": {
+    "id": 1,
+      "price": "100.00 per bushel",
+      "currency": "USD",
+      "quantity": "50 bushels",
+      "crop_name": "corn",
+      "farmer_id": 7
+  }
 }
 ```
 # Show Crop
@@ -267,39 +247,39 @@ creates a new crop
 `Status: 200 OK`
 ```
 {
-    "crops": {
-            "id": 37,
-            "farmer_id": 33,
-            "price": "14.40",
-            "currency": "$USD",
-            "quantity": "587",
-            "crop_name": "potatoes"
-        }
-    "avatar": {
-             "avatar": "image url"
-      },
-        {
-            "id": 23,
-            "farmer_id": 33,
-            "price": "37.33",
-            "currency": "$USD",
-            "quantity": "509",
-            "crop_name": "wheat"
-        }
-    "avatar": {
-             "avatar": "image url"
-      },
-        {
-            "id": 41,
-            "farmer_id": 33,
-            "price": "94.75",
-            "currency": "$USD",
-            "quantity": "367",
-            "crop_name": "strawberries"
-        }
-    "avatar": {
-             "avatar": "image url"
-      }
+  "crops": {
+    "id": 37,
+      "farmer_id": 33,
+      "price": "14.40",
+      "currency": "$USD",
+      "quantity": "587",
+      "crop_name": "potatoes"
+  }
+  "avatar": {
+    "avatar": "image url"
+  },
+    {
+      "id": 23,
+      "farmer_id": 33,
+      "price": "37.33",
+      "currency": "$USD",
+      "quantity": "509",
+      "crop_name": "wheat"
+    }
+  "avatar": {
+    "avatar": "image url"
+  },
+    {
+      "id": 41,
+      "farmer_id": 33,
+      "price": "94.75",
+      "currency": "$USD",
+      "quantity": "367",
+      "crop_name": "strawberries"
+    }
+  "avatar": {
+    "avatar": "image url"
+  }
 }
 ```
 
@@ -312,16 +292,16 @@ creates a new crop
 ```
 
 {
-    "crop": {
-        "id": 1,
-        "created_at": "2015-03-12T18:12:24.987Z",
-        "updated_at": "2015-03-12T20:34:28.108Z",
-        "farmer_id": 2,
-        "price": "100.00",
-        "currency": "USD",
-        "quantity": "250",
-        "crop_name": "corn",
-    }
+  "crop": {
+    "id": 1,
+      "created_at": "2015-03-12T18:12:24.987Z",
+      "updated_at": "2015-03-12T20:34:28.108Z",
+      "farmer_id": 2,
+      "price": "100.00",
+      "currency": "USD",
+      "quantity": "250",
+      "crop_name": "corn",
+  }
 }
 ```
 
@@ -333,7 +313,7 @@ creates a new crop
 `Status: 200 OK`
 ```
 {
-    "crop": "crop was deleted"
+  "crop": "crop was deleted"
 }
 ```
 
@@ -348,39 +328,39 @@ creates a new crop
 `GET /searches/search`
 
 ```json
-  { 
+{ 
   "auth-token": "auth-token-here"
-  }
-  
-  {
+}
+
+{
   "query": "runte"
-  }
+}
 ```
 
 ##### Response:
 `Status: 200 OK`
 ```
 {
-    "search": [
-        {
-            "customer_id": 15,
-            "contact_name": "Hal Will",
-            "business": "Runte LLC",
-            "url": "/customers/15"
-        },
-        {
-            "farmer_id": 36,
-            "contact_name": "Maritza Schaefer",
-            "farm": "Runte Inc",
-            "url": "/farmers/36"
-        },
-        {
-            "farmer_id": 57,
-            "contact_name": "Margarita Kuhn MD",
-            "farm": "Runte-Kutch",
-            "url": "/farmers/57"
-        }
-    ]
+  "search": [
+  {
+    "customer_id": 15,
+      "contact_name": "Hal Will",
+      "business": "Runte LLC",
+      "url": "/customers/15"
+  },
+  {
+    "farmer_id": 36,
+    "contact_name": "Maritza Schaefer",
+    "farm": "Runte Inc",
+    "url": "/farmers/36"
+  },
+  {
+    "farmer_id": 57,
+    "contact_name": "Margarita Kuhn MD",
+    "farm": "Runte-Kutch",
+    "url": "/farmers/57"
+  }
+  ]
 }
 ```
 
@@ -394,7 +374,7 @@ creates a new crop
 
 {
   "avatar": "image url"
-  }
+}
 
 ```
 
@@ -408,7 +388,7 @@ creates a new crop
 
 {
   "avatar": "image url"
-  }
+}
 
 ```
 # Follow Farmer
@@ -420,14 +400,14 @@ creates a new crop
 `Status: 201 Created`
 ```
 {
-    "follow": {
-        "farmer_id": 34,
-        "farmer_name": "Miss Marilyne Wyman",
-        "farmer_followers_count": 1,
-        "customer_id": 62,
-        "customer_name": Tiger Woods,
-        "customer_follow_count": 12
-    }
+  "follow": {
+    "farmer_id": 34,
+      "farmer_name": "Miss Marilyne Wyman",
+      "farmer_followers_count": 1,
+      "customer_id": 62,
+      "customer_name": Tiger Woods,
+      "customer_follow_count": 12
+  }
 }
 ```
 # Create Picture For Crops
@@ -440,6 +420,23 @@ creates a new crop
 
 {
   "avatar": "image url"
-  }
+}
 
 ```
+
+# Delete User
+
+### /users DELETE
+
+##### Mandatory Params
+* auth_token
+
+`Response:`
+`Status: 200 OK`
+``
+{
+  "message": "User was deleted"
+}
+
+```
+
