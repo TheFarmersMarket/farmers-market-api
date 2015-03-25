@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/searches/search', to: 'searches#search', as: 'searches_search'
   post 'customers/:id/follow', to: 'customers#follow'
   delete 'customers/:id/unfollow', to: 'customers#unfollow'
-
+  get 'customers/:id/all_following', to: 'customers#all_following'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
