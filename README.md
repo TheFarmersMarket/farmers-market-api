@@ -413,7 +413,7 @@ creates a new crop
 ```
 
 {
-    "follow": {
+    "unfollow": {
         "message": "Customer no longer follow farmer",
         "customer_id": 2,
         "customer_name": "Estell Howe",
