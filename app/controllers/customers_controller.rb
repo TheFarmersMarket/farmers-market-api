@@ -31,10 +31,9 @@ class CustomersController < ApplicationController
     render json: { pic: @customer.avatar.url(:medium) }, status: :created
   end
 
-  def follow
+  def follow(follower_email)
     if current_user.id == @customer.user_id
       @customer.follow(@farmer)
-        
       render "customers/follow.json.jbuilder", status: :created
     else
       render json: { :error => "unauthorized"}, status: :not_found
