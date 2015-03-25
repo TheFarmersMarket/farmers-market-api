@@ -85,6 +85,20 @@ creates a new user and resturns an authentication token.
     }
 }
 ```
+# Farmers Follower Count
+### /farmers/:id/follower_count GET
+##### Required Params
+* auth-token - passed in headers
+
+###### Response: 
+`Status: 201 Created`
+```
+{
+    "follower_count": {
+        "follower_count": 1
+    }
+}
+```
 
 # Edit Farmer Profile
 
@@ -403,7 +417,7 @@ creates a new crop
 ```
 
 # Unfollow Farmer
-### /customers/:id/unfollow DELETE
+### /customers/:id/unfollow PUT
 ##### Required Params
 * auth-token - passed in headers
 * farmer[id]
