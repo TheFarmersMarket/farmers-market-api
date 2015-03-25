@@ -401,6 +401,27 @@ creates a new crop
   }
 }
 ```
+
+# Unfollow Farmer
+### /customers/:id/follow DELETE
+##### Required Params
+* auth-token - passed in headers
+* farmer[id]
+
+###### Response:
+`Status: 200 OK`
+```
+
+{
+    "follow": {
+        "message": "Customer no longer follow farmer",
+        "customer_id": 2,
+        "customer_name": "Estell Howe",
+        "customer_follow_count": 0
+    }
+}
+```
+
 # Create Picture For Crops
 
 ### /crops/:crop_id/pic PUT
