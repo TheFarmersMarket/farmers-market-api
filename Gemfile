@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.1.5'
 
+gem "sidekiq"
+gem "sucker_punch"
 gem "acts_as_follower"
 gem "figaro"
 gem 'pg_search'
