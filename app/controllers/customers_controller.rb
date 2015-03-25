@@ -1,7 +1,7 @@
 class CustomersController < ApplicationController
-  before_action :authenticate_user_from_token!, :only => [:update, :destroy, :follow, :unfollow]
+  before_action :authenticate_user_from_token!, :only => [:update, :destroy, :follow, :unfollow, :all_following]
   before_action :set_farmer, only: [:follow, :unfollow]
-  before_action :set_customer, only: [:follow, :show, :destroy, :update, :unfollow]
+  before_action :set_customer, only: [:follow, :show, :destroy, :update, :unfollow, :all_following]
 
   def edit
   end
@@ -44,6 +44,16 @@ class CustomersController < ApplicationController
     if current_user.id == @customer.user_id
       @customer.stop_following(@farmer)
       render "customers/unfollow.json.jbuilder", status: :ok
+    else
+      render json: { :error => "unauthorized" }, status: :not_found
+    end
+  end
+
+  def all_following
+    if current_user.id == @customer.user_id
+      @results = @customer.all_following
+      # render json: { customer: @customer.all_following }, status: :ok
+      render "customers/allfollowing.json.jbuilder", status: :ok
     else
       render json: { :error => "unauthorized" }, status: :not_found
     end
