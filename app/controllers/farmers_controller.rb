@@ -1,5 +1,5 @@
 class FarmersController < ApplicationController
-  before_action :authenticate_user_from_token!, only: [:update, :destroy, :edit]
+  before_action :authenticate_user_from_token!, only: [:update, :destroy, :edit, :follower_count]
 
   def show
     @farmer = Farmer.find(params[:id])
@@ -27,6 +27,12 @@ class FarmersController < ApplicationController
     @farmer = Farmer.find(params[:id])
     @farmer.destroy
     render json: { farmer: "Farmer was deleted" }, status: :ok
+  end
+
+  def follower_count
+    @farmer = Farmer.find(params[:id])
+    @followers = @farmer.followers_count
+    render "farmers/followerscount.json.jbuilder", status: :created
   end
 
   def pic

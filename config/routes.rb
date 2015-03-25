@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   post 'customers/:id/follow', to: 'customers#follow'
   put 'customers/:id/unfollow', to: 'customers#unfollow'
   get 'customers/:id/all_following', to: 'customers#all_following'
+  get 'farmers/:id/follower_count', to: 'farmers#follower_count'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
