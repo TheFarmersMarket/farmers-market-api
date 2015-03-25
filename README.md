@@ -403,7 +403,7 @@ creates a new crop
 ```
 
 # Unfollow Farmer
-### /customers/:id/follow DELETE
+### /customers/:id/unfollow DELETE
 ##### Required Params
 * auth-token - passed in headers
 * farmer[id]
