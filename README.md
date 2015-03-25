@@ -422,6 +422,36 @@ creates a new crop
 }
 ```
 
+# Get Customer Follows
+### /customers/:id/all_following GET
+##### Required Params
+* auth-token - passed in headers
+* farmer[id]
+
+###### Response: 
+`Status: 200 OK`
+```
+{
+    "all_following": [
+        {
+            "farmer_id": 6,
+            "farm": "Goldner Inc",
+            "contact_name": "Miss Gregoria Wisoky"
+        },
+        {
+            "farmer_id": 2,
+            "farm": "Towne, Harber and Kris",
+            "contact_name": "Francisco Hilll"
+        },
+        {
+            "farmer_id": 4,
+            "farm": "Corkery Inc",
+            "contact_name": "Maye Yost Sr."
+        }
+    ]
+}
+```
+
 # Create Picture For Crops
 
 ### /crops/:crop_id/pic PUT
