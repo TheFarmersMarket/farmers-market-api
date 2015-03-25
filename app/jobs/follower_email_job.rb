@@ -1,7 +1,10 @@
 class FollowerEmailJob < ActiveJob::Base
   queue_as :default
 
-  def perform(follower_email)
-    FollowerMailer.follower_email.deliver_now
+
+  def perform(followers, crop)
+    followers.each do |f|
+      FollowerMailer.new_crop_mail(f, crop).deliver_now
+    end
   end
 end
