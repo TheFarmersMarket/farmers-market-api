@@ -3,7 +3,7 @@ class CropsController < ApplicationController
 
   def create
     @crop = current_user.farmer.crops.build(crop_params)
-    @followers = Farmer.find(params[:id]).followers.includes(:user)
+    @followers = current_user.farmer.followers.first.user
     if @crop.save
       NewCropEmailJob.perform_now(@followers)
       render :create, status: :created
