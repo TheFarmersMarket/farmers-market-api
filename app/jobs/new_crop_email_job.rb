@@ -3,7 +3,7 @@ class NewCropEmailJob < ActiveJob::Base
 
   def perform(followers)
     followers.each do |f|
-    FollowerMailer.new_crop_mail(followers).deliver_now
+    FollowerMailer.new_crop_mail.deliver_now
     end
   end
 end
