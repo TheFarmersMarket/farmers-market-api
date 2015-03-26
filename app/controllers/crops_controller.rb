@@ -3,10 +3,9 @@ class CropsController < ApplicationController
 
   def create
     @crop = current_user.farmer.crops.build(crop_params)
-    # @followers = Farmer.find(params[:id]).followers.includes(:user)
-    # @user = User.find(@followers.first)
+    @followers = Farmer.find(params[:id]).followers.includes(:user)
     if @crop.save
-      # NewCropEmailJob.perform_now(@followers)
+      NewCropEmailJob.perform_now(@followers)
       render :create, status: :created
     else 
       render json: { messages: @crop.errors.full_messages }, status: :unprocessable_entity
