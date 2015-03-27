@@ -1,7 +1,8 @@
 class FollowerMailer < ApplicationMailer
   default from: 'no-reply@tiy-farmers-market.herokuapp.com'
   
-  def new_crop_mail
+  def new_crop_mail(followers)
+    binding.pry
     @followers = followers.first.user
     mail(to: @followers.email, subject: 'Your farmer has uploaded new crops')
   end
